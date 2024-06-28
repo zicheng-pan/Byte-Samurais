@@ -1,0 +1,74 @@
+@primaryColor: #302e2b;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #0c121c;
+  background: #f9f7f6;
+}
+
+@platFormBtn: {
+  width: 180px;
+  height: 48px;
+  border-radius: 2px;
+};
+
+@smallBtn: {
+  width: 99px;
+  height: 32px;
+  border-radius: 2px;
+};
+
+@darkBtn: {
+  background: @primaryColor;
+  color: #ffffff;
+  &:hover {
+    background: lighten(@primaryColor, 15%) !important;
+    color: #ffffff !important;
+    border: none;
+  }
+};
+
+@modalContent: {
+  font-size: 16px;
+};
+
+:global {
+  .ant-collapse,
+  .ant-collapse .ant-collapse-item:last-child > .ant-collapse-content,
+  .ant-collapse > .ant-collapse-item:last-child,
+  .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+    border-radius: 0px;
+  }
+  .ant-collapse-item {
+    background: #eae8e4;
+  }
+  .ant-menu-light .ant-menu-item-selected,
+  .ant-menu-light > .ant-menu .ant-menu-item-selected {
+    color: #0c121c !important;
+    background-color: #eae8e4 !important;
+  }
+  li.ant-menu-item.ant-menu-item-active.ant-menu-item-only-child {
+    color: #0c121c !important;
+    background-color: #eae8e4 !important;
+  }
+  .ant-form-item .ant-form-item-label > label {
+    color: #767676;
+  }
+  .ant-input-group-wrapper-outlined .ant-input-group-addon:last-child {
+    border: none;
+    background: transparent;
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    border-color: #1b1a18;
+    background-color: #1b1a18;
+  }
+  .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+  .ant-checkbox:hover .ant-checkbox-inner,
+  .ant-checkbox-checked:hover .ant-checkbox-inner {
+    border-color: #1b1a18 !important;
+  }
+  .ant-checkbox-indeterminate .ant-checkbox-inner:after {
+    background-color: #1b1a18;
+  }
+}
